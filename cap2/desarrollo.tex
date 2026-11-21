@@ -1,0 +1,61 @@
+\chapter{Desarrollo}\label{Chap2}
+
+\section{Marco teórico}
+
+[Texto de ejemplo. Presente aquí los conceptos y definiciones necesarios
+para entender el trabajo. Cada ecuación debe ir seguida de la definición
+de sus símbolos, como en el ejemplo siguiente.]
+
+\begin{equation}
+y = ax^2 + bx + c
+\label{eq:ejemplo}
+\end{equation}
+
+donde $y$ es la variable dependiente, $x$ es la variable independiente, y
+$a$, $b$ y $c$ son coeficientes constantes. La ecuación~\eqref{eq:ejemplo}
+se cita en el texto con su número, así: la ecuación~\eqref{eq:ejemplo}
+describe una parábola.
+
+\section{Metodología}
+
+[Texto de ejemplo. Describa aquí cómo se realizó el trabajo: métodos,
+materiales y procedimiento. Los conceptos de \cite{libro-ejemplo} sirven
+de referencia para esta sección.]
+
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=0.9]
+		\draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+		\draw[->] (0,-0.5) -- (0,4.5) node[above] {$y$};
+		\draw[domain=-2:2,smooth,variable=\x,thick] plot ({\x},{\x*\x});
+	\end{tikzpicture}
+	\caption[Figura de ejemplo]{Figura de ejemplo: parábola $y = x^2$.}
+	\label{fig:ejemplo}
+\end{figure}
+
+La figura~\ref{fig:ejemplo} muestra un ejemplo de figura con su pie y su
+etiqueta: toda figura debe introducirse y comentarse en el texto.
+
+\section{Resultados de ejemplo}
+
+[Texto de ejemplo. Presente aquí los resultados principales y compárelos
+con lo reportado en la literatura, por ejemplo en
+\cite{articulo-ejemplo}.]
+
+\begin{table}[htbp]
+	\centering
+	\caption[Tabla de ejemplo]{Tabla de ejemplo: datos ilustrativos.}
+	\label{tab:ejemplo}
+	\begin{tabular}{lcc}
+	\hline
+	Caso & Valor A & Valor B \\
+	\hline
+	1 & 1.0 & 2.0 \\
+	2 & 1.5 & 2.5 \\
+	3 & 2.0 & 3.0 \\
+	\hline
+	\end{tabular}
+\end{table}
+
+La tabla~\ref{tab:ejemplo} resume los datos de ejemplo: toda tabla debe
+introducirse y comentarse en el texto, igual que las figuras.
