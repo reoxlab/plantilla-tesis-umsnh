@@ -1,0 +1,29 @@
+# LaTeX intermedios y salida
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.brf
+*.idx
+*.ilg
+*.ind
+*.nlo
+*.nls
+*.dvi
+*.ps
+*.pdf
+!Latex/Classes/Escudos/logo_FISMAT.pdf
+# Respaldos y temporales
+*.bak
+*.bak-*
+*~
+.DS_Store
+# Paquete para compartir (se genera al empaquetar)
+*.zip
