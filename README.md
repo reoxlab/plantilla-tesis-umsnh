@@ -30,6 +30,10 @@ repórtelo: es un error.
   sus estilos `.bst`; `Latex/Classes/Escudos/` — escudos UMSNH y FISMAT
   que usa la portada; `Latex/Macros/MacroFile1.tex` — macros de ayuda.
 
+## Tablas
+
+Para armar las tablas sin escribir LaTeX a mano: [TableX](https://reoxlab.com/herramientas/tablex/) (Reox Lab, GPL v3) — editas la tabla en una cuadrícula y copias el código (estándar, booktabs, longtable o tabularx); también importa tablas de LaTeX y de Excel.
+
 ## Requisitos
 
 TeX Live con `pdflatex`, `bibtex` y `latexmk` (en Debian/Ubuntu:
