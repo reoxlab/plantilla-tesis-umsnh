@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          PLANTILLA DE TESIS — UNIVERSIDAD MICHOACANA DE SAN NICOLÁS
+%                              DE HIDALGO (UMSNH)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Formato FISMAT-UMSNH (clase PhDthesisPSnPDF, GNU GPL v3).
+%  Plantilla genérica de ejemplo: sustituya TODOS los datos marcados
+%  entre corchetes o con «Nombre...» / «Título...» por los suyos.
+%  Cómo usarla: vea README.md
+
+% openany: los capítulos empiezan en cualquier página (sin openany, la
+% clase libro los fuerza a página impar y el PDF se llena de páginas en
+% blanco). Para impresión a doble cara, quitar openany.
+\documentclass[twoside,11pt,openany]{Latex/Classes/PhDthesisPSnPDF}
+\usepackage{helvet}
+%\renewcommand*\familydefault{\ttdefault} %% Solo si la fuente base será typewriter
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% Paquetes extra (pueden incluirse aquí o en la clase).
+\usepackage{ragged2e}
+\usepackage[square,sort,numbers]{natbib}
+\usepackage{tikz} % Solo para la figura de ejemplo del capítulo 2
+\usepackage{booktabs} % Reglas \toprule, \midrule y \bottomrule para las tablas
+
+\input{Latex/Macros/MacroFile1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   DATOS
+%              (SUSTITUIR: son solo valores de ejemplo)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Título de la tesis}
+\author{Nombre del Autor \\}
+\facultad{Facultad de Ciencias Físico Matemáticas \\ ``Mat. Luis Manuel Rivera Gutiérrez''}
+
+\escudofacultad{Latex/Classes/Escudos/logo_FISMAT}
+
+\degree{Doctor en Ciencias en Ingeniería Física}
+\director{Dr. Nombre del Director \\ Institución del director}
+\matricula{[número de matrícula]}
+\correo{[correo institucional]}
+\degreedate{mes, año}
+\lugar{Morelia, Michoacán, México}
+\portadafalse
+
+%% Comité tutor (descomentar y completar si aplica; si no hay codirector,
+%% borre la línea siguiente: la portada lo imprime tal como está aquí).
+\ctutoruno{Dr. Nombre del Codirector \\ Institución del codirector}
+
+%% Opciones del posgrado (descomentar si las necesitan)
+%\posgradotrue
+%\programa{programa de maestría y doctorado en ingeniería}
+%\campo{Ingeniería Eléctrica - Control}
+%% Datos del jurado (descomentar y completar al entregar)
+%\presidente{Dr. Nombre del Presidente}
+%\secretario{Dr. Nombre del Secretario}
+%\vocal{Dr. Nombre del Vocal}
+%\supuno{Dr. Nombre del Primer Suplente}
+%\supdos{Dr. Nombre del Segundo Suplente}
+%\institucion{la institución donde se realizó la tesis}
+
+\keywords{palabra clave 1, palabra clave 2, palabra clave 3}
+\subject{tesis, plantilla}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   PORTADA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% La portada se genera automáticamente desde los datos de arriba.
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  PRÓLOGO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\include{Declaracion/decla}
+\include{Agradecimientos/Dedicatoria}
+\include{Agradecimientos/Agradecimientos}
+\include{Resumen/Resumen}
+\include{Resumen/abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   ÍNDICES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Esta sección genera el índice
+\setcounter{secnumdepth}{3} % nivel que recibe numeración
+\setcounter{tocdepth}{3}    % nivel que se imprime en el índice
+\tableofcontents            % Genera el índice
+%: ----------------------- list of figures/tables ------------------------
+%\listoffigures              % Genera el índice de figuras (descomentar si se usa)
+%\listoftables               % Genera el índice de tablas (descomentar si se usa)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   CONTENIDO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+% Interlineado de 1.5
+\def\baselinestretch{1.5}
+\include{cap1/introduccion}
+\include{cap2/desarrollo}
+\include{cap3/tutorial}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   APÉNDICES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\include{apen/apeA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   REFERENCIAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Existen varios estilos de bibliografía; pueden cambiarlos a placer.
+\bibliographystyle{plainnat} % otros: abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt
+
+\bibliography{biblio/referencias-ejemplo} % Archivo .bib
+
+
+\end{document}
