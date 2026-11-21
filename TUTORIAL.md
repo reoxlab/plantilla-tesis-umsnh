@@ -128,6 +128,8 @@ Con el paquete `booktabs` se usan `\toprule`, `\midrule` y
 `\bottomrule` en lugar de `\hline`. Toda tabla debe introducirse y
 comentarse en el texto, igual que las figuras.
 
+Para armarla sin escribir el código a mano: [TableX](https://reoxlab.com/herramientas/tablex/) genera el `tabular` (estándar, booktabs, longtable o tabularx) desde una cuadrícula, y también importa tablas de LaTeX y de Excel.
+
 ## Cómo compilar
 
 La forma recomendada es `latexmk`, que repite las pasadas necesarias
